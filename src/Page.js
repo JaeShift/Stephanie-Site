@@ -1,18 +1,15 @@
 import { useState } from "react";
-import {
-  Phone, Mail, MapPin, CalendarCheck2, FileText,
-  ShieldCheck, Stethoscope, Brain
-} from "lucide-react";
+import { CalendarCheck2, Monitor, Brain, Activity } from "lucide-react";
 
 /* Booking form */
 function BookingForm() {
   const [sent, setSent] = useState(false);
   return (
-    <div className="card border-green-200 bg-gradient-to-br from-white to-green-50">
+    <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
       {sent ? (
         <div role="status" className="text-center">
-          <h4 className="text-xl font-semibold text-green-800">Thank you!</h4>
-          <p className="mt-1 text-sm text-slate-600">
+          <h4 className="text-xl font-semibold text-gray-900">Thank you!</h4>
+          <p className="mt-2 text-sm text-gray-600">
             Your request was received. We'll reach out to schedule shortly.
           </p>
         </div>
@@ -20,46 +17,41 @@ function BookingForm() {
         <form
           aria-label="Booking request form"
           onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-          className="grid gap-4"
+          className="space-y-6"
         >
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label className="label" htmlFor="name">Full name</label>
-              <input id="name" name="name" required className="input focus:ring-green-500 focus:border-green-500" placeholder="Full name" />
-            </div>
-            <div>
-              <label className="label" htmlFor="email">Email</label>
-              <input id="email" name="email" required type="email" className="input focus:ring-green-500 focus:border-green-500" placeholder="you@email.com" />
-            </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="name">Full name</label>
+            <input id="name" name="name" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Full name" />
           </div>
-
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label className="label" htmlFor="phone">Phone</label>
-              <input id="phone" name="phone" required className="input focus:ring-green-500 focus:border-green-500" placeholder="(555) 555-5555" />
-            </div>
-            <div>
-              <label className="label" htmlFor="reason">Reason for visit</label>
-              <select id="reason" name="reason" className="input focus:ring-green-500 focus:border-green-500">
-                <option>New patient consult</option>
-                <option>Medication management</option>
-                <option>ADHD evaluation (adult)</option>
-                <option>Follow-up</option>
-                <option>Other</option>
-              </select>
-            </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="email">Email</label>
+            <input id="email" name="email" required type="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="you@email.com" />
           </div>
 
           <div>
-            <label className="label" htmlFor="message">Notes</label>
-            <textarea id="message" name="message" className="textarea focus:ring-green-500 focus:border-green-500" placeholder="Briefly describe how we can help" />
-            <p className="hint mt-1">
-              * Don't include protected health information (PHI). We'll collect clinical details through the patient portal if appropriate.
-            </p>
+            <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="phone">Phone</label>
+            <input id="phone" name="phone" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="(555) 555-5555" />
           </div>
 
-          <button className="btn-primary w-full sm:w-auto bg-green-600 hover:bg-green-700 focus:ring-green-500" aria-label="Send booking request">
-            <CalendarCheck2 size={18} /> Send booking request
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="reason">Reason for visit</label>
+            <select id="reason" name="reason" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              <option>New patient consult</option>
+              <option>Medication management</option>
+              <option>ADHD evaluation (adult)</option>
+              <option>Follow-up</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="message">Notes</label>
+            <textarea id="message" name="message" rows="3" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Briefly describe how we can help" />
+          </div>
+
+          <button className="w-full bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors" aria-label="Send booking request">
+            <CalendarCheck2 size={18} className="inline mr-2" /> Send booking request
           </button>
         </form>
       )}
@@ -69,214 +61,119 @@ function BookingForm() {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-green-50 via-emerald-50 to-white text-slate-900">
-      {/* NAV */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-green-200">
-        <div className="section flex items-center justify-between py-3">
-          <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-green-600 to-emerald-700 grid place-content-center text-white">
-              <Brain size={18} aria-hidden />
-            </div>
-            <div>
-              <p className="text-[11px] font-medium text-green-700">Psychiatric-Mental Health • Family Practice</p>
-              <h1 className="text-sm sm:text-base font-bold">Stephanie M. Nichols, APRN-CNP</h1>
-            </div>
-          </div>
-          <nav className="hidden sm:flex items-center gap-2" aria-label="Primary">
-            <a href="#services" className="chip hover:bg-green-100 hover:border-green-300">Services</a>
-            <a href="#about" className="chip hover:bg-green-100 hover:border-green-300">About</a>
-            <a href="#patients" className="chip hover:bg-green-100 hover:border-green-300">New Patients</a>
-            <a href="#contact" className="btn-primary bg-green-600 hover:bg-green-700 focus:ring-green-500"><CalendarCheck2 size={18}/> Book</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* HERO */}
-      <section className="section pt-12 sm:pt-16 lg:pt-24 pb-12">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <p className="kicker text-green-700">Private Nurse Practitioner Psychiatry</p>
-            <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-              Family Nurse Practitioner with a master's in Psychiatric-Mental Health
-            </h2>
-            <p className="mt-4 text-base sm:text-lg text-slate-700 max-w-prose">
-              Evaluation, diagnosis, and ongoing management with a whole-person, evidence-based approach.
-              Collaborative treatment plans, clear education, and respectful listening.
-            </p>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a href="#contact" className="btn-primary bg-green-600 hover:bg-green-700 focus:ring-green-500">
-                <CalendarCheck2 size={18}/> Request an appointment
-              </a>
-              <span className="chip bg-green-100 border-green-300 text-green-800"><ShieldCheck size={14}/> APRN-CNP</span>
-              <span className="chip bg-emerald-100 border-emerald-300 text-emerald-800"><Stethoscope size={14}/> Primary & Behavioral Health</span>
-            </div>
-          </div>
-
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50">
-            <ul className="grid sm:grid-cols-2 gap-4">
-              {[
-                ["Anxiety disorders","Generalized, panic, social"],
-                ["Mood disorders","Depression, bipolar"],
-                ["Adult ADHD","Assessment & management"],
-                ["PTSD & trauma","Trauma-informed care"],
-                ["Sleep issues","Evaluation & strategies"],
-                ["Women's mental health","Across the lifespan"],
-              ].map(([title,sub])=> (
-                <li key={title} className="rounded-xl border border-green-200 p-4 bg-white hover:bg-green-50 transition-colors">
-                  <p className="font-semibold text-green-800">{title}</p>
-                  <p className="text-sm text-slate-600">{sub}</p>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-3 text-xs text-green-600">Care plans are individualized; this is a partial list.</p>
-          </div>
+    <main className="min-h-screen bg-white">
+      {/* HERO SECTION */}
+      <section className="pt-20 pb-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Compassionate Mental Health & Wellness Care
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 mb-8">
+            Televisits • Adult Mental Health • Mid-Life Hormone Care
+          </p>
+          <a 
+            href="#contact" 
+            className="inline-block bg-black text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-800 transition-colors"
+          >
+            Book a Telehealth Appointment
+          </a>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section id="services" className="section py-12 lg:py-16">
-        <div className="grid lg:grid-cols-3 gap-6">
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-bold text-green-800">Comprehensive Psychiatric Evaluation</h3>
-            <p className="mt-2 text-sm text-slate-700">
-              In-depth history, diagnostic clarification, and collaborative planning.
-            </p>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li>• Medication management when appropriate</li>
-              <li>• Lifestyle & sleep hygiene guidance</li>
-              <li>• Coordination with therapists & PCPs</li>
-            </ul>
-          </div>
-
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-bold text-green-800">Ongoing Medication Management</h3>
-            <p className="mt-2 text-sm text-slate-700">Regular follow-ups to monitor response, side effects, and goals.</p>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li>• Shared decision-making</li>
-              <li>• Pharmacogenomics (if applicable)</li>
-              <li>• Lab monitoring & safety reviews</li>
-            </ul>
-          </div>
-
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-bold text-green-800">Telehealth & In-Person</h3>
-            <p className="mt-2 text-sm text-slate-700">
-              Secure video for established patients; in-person by appointment.
-            </p>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li>• HIPAA-conscious platforms</li>
-              <li>• Flexible scheduling</li>
-              <li>• Ohio patients (update as needed)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section id="about" className="section py-12 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50">
-            <h3 className="text-2xl font-bold text-green-800">Meet Stephanie</h3>
-            <p className="mt-3 text-sm text-slate-700">
-              Family Nurse Practitioner with a master's focus in Psychiatric-Mental Health.
-              Experienced across primary care and behavioral health settings.
-            </p>
-            <div id="credentials" className="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
-              <div className="rounded-xl border border-green-200 p-4 bg-white">
-                <p className="font-semibold text-green-700">Credentials</p>
-                <ul className="mt-1 text-slate-700 space-y-1">
-                  <li>• APRN-CNP</li>
-                  <li>• Master's concentration: Psychiatric-Mental Health</li>
-                  <li>• Family/Individual Across the Lifespan</li>
-                </ul>
+      {/* SERVICE CARDS */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Televisits Card */}
+            <div className="bg-gray-50 rounded-2xl p-8 text-center shadow-sm border border-gray-100">
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <Monitor size={32} className="text-gray-600" />
               </div>
-              <div className="rounded-xl border border-green-200 p-4 bg-white">
-                <p className="font-semibold text-green-700">Care Philosophy</p>
-                <p className="mt-1 text-slate-700">
-                  Whole-person, trauma-informed, collaborative care.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <BookingForm />
-        </div>
-      </section>
-
-      {/* NEW PATIENTS */}
-      <section id="patients" className="section py-12 lg:py-16">
-        <div className="grid lg:grid-cols-3 gap-6">
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-bold flex items-center gap-2 text-green-800">
-              <FileText size={18}/> New Patient Steps
-            </h3>
-            <ol className="mt-2 text-sm space-y-2 text-slate-700 list-decimal list-inside">
-              <li>Submit a booking request.</li>
-              <li>Complete electronic intake forms (sent securely).</li>
-              <li>Attend your evaluation (telehealth or in-person).</li>
-            </ol>
-          </div>
-
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-bold text-green-800">Insurance & Payment</h3>
-            <p className="mt-2 text-sm text-slate-700">Add accepted plans or cash-pay rates.</p>
-            <ul className="mt-2 text-sm text-slate-700 space-y-1">
-              <li>• Superbills for out-of-network reimbursement</li>
-              <li>• HSA/FSA accepted (if applicable)</li>
-              <li>• Transparent pricing</li>
-            </ul>
-          </div>
-
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50 hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-bold text-green-800">Crisis & Safety</h3>
-            <p className="mt-2 text-sm text-slate-700">
-              This practice does not provide emergency services.
-            </p>
-            <ul className="mt-2 text-sm text-slate-700 space-y-1">
-              <li>• In crisis? Call 988 (Suicide & Crisis Lifeline)</li>
-              <li>• Immediate danger? Call 911 or go to the nearest ER</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="section py-12 lg:py-16">
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          <div className="card border-green-200 bg-gradient-to-br from-white to-green-50">
-            <h3 className="text-2xl font-bold text-green-800">Get in touch</h3>
-            <div className="mt-3 grid gap-2 text-sm text-slate-700">
-              <p className="flex items-center gap-2"><Phone size={16}/> <span><strong>Phone:</strong> (xxx) xxx-xxxx</span></p>
-              <p className="flex items-center gap-2"><Mail size={16}/> <span><strong>Email:</strong> hello@example.com</span></p>
-              <p className="flex items-center gap-2"><MapPin size={16}/> <span><strong>Office:</strong> 123 Placeholder Rd, Suite 100</span></p>
-              <a className="btn-ghost mt-2 inline-flex text-green-700 hover:text-green-800 hover:bg-green-100" href="mailto:hello@example.com?subject=Consult%20Request">
-                Email to request an appointment
-              </a>
-              <p className="text-xs text-green-600 mt-2">
-                Email is for scheduling/administrative questions only. Don't send PHI.
-                Established patients: use the portal.
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Televisits.</h3>
+              <p className="text-gray-600 mb-4">
+                Secure, convenient virtual visits for adults. Access care on your schedule in the privacy of your chosen space.
               </p>
+              <button className="text-green-600 font-medium hover:text-green-700 transition-colors">
+                Learn more.
+              </button>
+            </div>
+
+            {/* Adult Mental Health Card */}
+            <div className="bg-gray-50 rounded-2xl p-8 text-center shadow-sm border border-gray-100">
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <Brain size={32} className="text-gray-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Adult Mental Health.</h3>
+              <p className="text-gray-600 mb-4">
+                Evaluations, ongoing support, and personalized medication management. Your wellbeing, fully supported.
+              </p>
+              <button className="text-green-600 font-medium hover:text-green-700 transition-colors">
+                Learn more.
+              </button>
+            </div>
+
+            {/* Mid-Life Hormones Card */}
+            <div className="bg-gray-50 rounded-2xl p-8 text-center shadow-sm border border-gray-100">
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <Activity size={32} className="text-gray-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Mid-Life Hormones.</h3>
+              <p className="text-gray-600 mb-4">
+                Evidence-based care to support hormonal balance. Restore wellness and improve quality of life.
+              </p>
+              <button className="text-green-600 font-medium hover:text-green-700 transition-colors">
+                Learn more.
+              </button>
             </div>
           </div>
+        </div>
+      </section>
 
-          <BookingForm />
+      {/* ABOUT SECTION */}
+      <section className="py-16 px-4 border-t border-blue-200 border-l border-blue-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">About Stephanie</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Family Nurse Practitioner with a master's focus in Psychiatric-Mental Health. 
+                Experienced across primary care and behavioral health settings.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-gray-700">APRN-CNP</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-gray-700">Psychiatric-Mental Health Specialist</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-gray-700">Whole-person, trauma-informed care</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Request an Appointment</h3>
+              <BookingForm />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-green-200 bg-gradient-to-r from-green-50 to-white">
-        <div className="section py-8 text-sm text-slate-600">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <p>© {new Date().getFullYear()} Stephanie M. Nichols, APRN-CNP. All rights reserved.</p>
-            <div className="flex items-center gap-3">
-              <button className="text-xs underline bg-transparent border-none cursor-pointer text-green-700 hover:text-green-800">Privacy Notice</button>
-              <button className="text-xs underline bg-transparent border-none cursor-pointer text-green-700 hover:text-green-800">Patient Forms</button>
-              <button className="text-xs underline bg-transparent border-none cursor-pointer text-green-700 hover:text-green-800">Accessibility</button>
-            </div>
-          </div>
-          <p className="mt-2 text-xs text-green-600">
-            Information is educational only and does not establish a patient-provider relationship until intake is completed and confirmed.
+      <footer className="bg-gray-50 border-t border-gray-200 py-12 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-gray-600 mb-4">
+            © {new Date().getFullYear()} Stephanie M. Nichols, APRN-CNP. All rights reserved.
           </p>
+          <div className="flex justify-center gap-6 text-sm">
+            <button className="text-gray-500 hover:text-gray-700 transition-colors">Privacy Notice</button>
+            <button className="text-gray-500 hover:text-gray-700 transition-colors">Patient Forms</button>
+            <button className="text-gray-500 hover:text-gray-700 transition-colors">Accessibility</button>
+          </div>
         </div>
       </footer>
     </main>
