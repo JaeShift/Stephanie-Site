@@ -65,12 +65,9 @@ export default function Page() {
       {/* HERO SECTION */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Compassionate Mental Health & Wellness Care
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            Mental Health & Wellness Care
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-8">
-            Televisits • Adult Mental Health • Mid-Life Hormone Care
-          </p>
           <a 
             href="#contact" 
             className="inline-block bg-black text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-800 transition-colors"
