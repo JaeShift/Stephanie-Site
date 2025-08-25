@@ -130,13 +130,14 @@ p {
   color: white;
   border-color: var(--teal);
   box-shadow: var(--shadow);
+  font-weight: var(--weight-semibold);
 }
 
 .btn--primary:hover {
   background-color: var(--teal-hover);
   border-color: var(--teal-hover);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lift);
+  box-shadow: 0 8px 25px rgba(44, 142, 139, 0.4);
 }
 
 .btn--primary.hero__cta {
@@ -147,8 +148,8 @@ p {
 
 .btn--large {
   padding: var(--space-lg) var(--space-xxl);
-  font-size: 16px;
-  font-weight: var(--weight-semibold);
+  font-size: 18px;
+  font-weight: var(--weight-bold);
 }
 
 .btn--secondary {
@@ -278,11 +279,25 @@ p {
 .hero__name {
   font-size: var(--text-h1);
   font-weight: var(--weight-bold);
-  margin: 0;
+  margin: 0 0 var(--space-lg) 0;
   color: var(--ink);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease-out 0.35s forwards;
+}
+
+.hero__intro {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out 0.5s forwards;
+  margin-bottom: var(--space-xl);
+}
+
+.hero__intro p {
+  font-size: var(--text-large);
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
 }
 
 .hero__tagline {
@@ -584,7 +599,7 @@ p {
 }
 
 .about-care__icon::after {
-  content: '✓';
+  content: '•';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1358,19 +1373,16 @@ p {
 }
 
 .step-detail {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
   background: var(--teal-light);
   padding: var(--space-sm) var(--space-md);
   border-radius: 8px;
   font-size: 13px;
   color: var(--teal-700);
+  text-align: center;
+  font-style: italic;
 }
 
-.detail-icon {
-  font-size: 16px;
-}
+/* Removed emoji styling for professional appearance */
 
 /* Expectations Note */
 .expectations-note {
@@ -1393,15 +1405,13 @@ p {
 }
 
 .difference-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-md);
+  background: white;
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
-.difference-icon {
-  font-size: 24px;
-  flex-shrink: 0;
-}
+/* Removed emoji styling for professional appearance */
 
 .difference-item strong {
   display: block;
@@ -1481,6 +1491,19 @@ p {
 
 .crisis-item:last-child {
   margin-bottom: 0;
+}
+
+/* Bio Content */
+.bio-content {
+  margin: var(--space-xl) 0;
+}
+
+.bio-content p {
+  font-size: var(--text-large);
+  line-height: 1.6;
+  color: var(--ink);
+  text-align: center;
+  margin: 0;
 }
 
 .footer__container {

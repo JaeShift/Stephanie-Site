@@ -6,10 +6,10 @@ export default function Page() {
       {/* About My Care Section */}
       <section id="services" className="section section--gradient">
         <div className="section__container">
-          <h2 className="section__title">Comprehensive Mental Health & Specialized Women's Hormone Care</h2>
+          <h2 className="section__title">Women's Mental Health & Hormone Specialties</h2>
           <p className="section__subtitle">
-            Adult mental health services for all patients, plus specialized hormone therapy for women. 
-            Expert care addressing the complex relationship between hormones, mental health, and life transitions.
+            Integrated psychiatric and hormonal care designed specifically for women during life transitions. 
+            Understanding how hormones impact mental health for comprehensive, compassionate treatment.
           </p>
           
           <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', maxWidth: '1000px', margin: '0 auto'}}>
@@ -21,34 +21,34 @@ export default function Page() {
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                   </svg>
                 </div>
-                <h3>Mental Health Conditions I Treat</h3>
+                                        <h3>Women's Mental Health Specialties</h3>
         </div>
-              <ul className="specialty-list">
-                <li className="specialty-item">
-                  <span className="specialty-name">Anxiety & Depression</span>
-                  <span className="specialty-desc">For all adults, including hormone-related mood changes</span>
-                </li>
-                <li className="specialty-item">
-                  <span className="specialty-name">Adult ADHD</span>
-                  <span className="specialty-desc">Comprehensive evaluation and management</span>
-                </li>
-                <li className="specialty-item">
-                  <span className="specialty-name">Life Transitions & Adjustment</span>
-                  <span className="specialty-desc">Career changes, relationship shifts, major life events</span>
-                </li>
-                <li className="specialty-item">
-                  <span className="specialty-name">Perimenopause & Postmenopause Mental Health</span>
-                  <span className="specialty-desc">Women's mood changes during hormonal transitions</span>
-                </li>
-                <li className="specialty-item">
-                  <span className="specialty-name">Sleep & Mood Disorders</span>
-                  <span className="specialty-desc">Sleep issues affecting mental health and wellbeing</span>
-                </li>
-                <li className="specialty-item">
-                  <span className="specialty-name">Medication Management</span>
-                  <span className="specialty-desc">Psychiatric medications and monitoring</span>
-                </li>
-              </ul>
+                      <ul className="specialty-list">
+                        <li className="specialty-item">
+                          <span className="specialty-name">Perimenopause & Menopause Depression</span>
+                          <span className="specialty-desc">Mood changes during hormonal transitions</span>
+                        </li>
+                        <li className="specialty-item">
+                          <span className="specialty-name">Hormone-Related Anxiety</span>
+                          <span className="specialty-desc">Anxiety linked to estrogen fluctuations</span>
+                        </li>
+                        <li className="specialty-item">
+                          <span className="specialty-name">PMDD & Severe PMS</span>
+                          <span className="specialty-desc">Premenstrual dysphoric disorder treatment</span>
+                        </li>
+                        <li className="specialty-item">
+                          <span className="specialty-name">Postpartum Mental Health</span>
+                          <span className="specialty-desc">Depression and anxiety after childbirth</span>
+                        </li>
+                        <li className="specialty-item">
+                          <span className="specialty-name">Adult ADHD in Women</span>
+                          <span className="specialty-desc">Often undiagnosed, especially mid-life</span>
+                        </li>
+                        <li className="specialty-item">
+                          <span className="specialty-name">Life Transition Support</span>
+                          <span className="specialty-desc">Empty nest, divorce, career changes, aging parents</span>
+                        </li>
+                      </ul>
           </div>
           
             {/* How I Help Card */}
@@ -59,41 +59,40 @@ export default function Page() {
                     <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                   </svg>
                 </div>
-                <h3>Services I Provide</h3>
-              </div>
-              <ul className="approach-list">
-                <li className="approach-item">
-                  <span className="approach-name">Mental Health Medication Management</span>
-                  <span className="approach-desc">Antidepressants, anti-anxiety, ADHD medications for all adults</span>
-                </li>
-                <li className="approach-item">
-                  <span className="approach-name">Hormone Replacement Therapy (Women)</span>
-                  <span className="approach-desc">Bioidentical hormone therapy for women's mid-life transitions</span>
-                </li>
-                <li className="approach-item">
-                  <span className="approach-name">Comprehensive Psychiatric Evaluations</span>
-                  <span className="approach-desc">Thorough assessments for accurate diagnosis and treatment</span>
-                </li>
-                <li className="approach-item">
-                  <span className="approach-name">Lab Interpretation & Monitoring</span>
-                  <span className="approach-desc">Medication levels, hormone panels, comprehensive monitoring</span>
-                </li>
-                <li className="approach-item">
-                  <span className="approach-name">Integrated Care Coordination</span>
-                  <span className="approach-desc">Working with your other providers for comprehensive care</span>
-                </li>
-                <li className="approach-item">
-                  <span className="approach-name">Secure Telehealth Platform</span>
-                  <span className="approach-desc">Private, HIPAA-compliant virtual appointments</span>
-                </li>
-              </ul>
+                                        <h3>Integrated Care Approach</h3>
+                      </div>
+                      <ul className="approach-list">
+                        <li className="approach-item">
+                          <span className="approach-name">Hormone-Informed Mental Health</span>
+                          <span className="approach-desc">Understanding how estrogen, progesterone affect mood</span>
+                        </li>
+                        <li className="approach-item">
+                          <span className="approach-name">Life Stage-Specific Treatment</span>
+                          <span className="approach-desc">Perimenopause, menopause, postpartum focused care</span>
+                        </li>
+                        <li className="approach-item">
+                          <span className="approach-name">Women-Centered Therapy</span>
+                          <span className="approach-desc">Understanding unique female experiences and challenges</span>
+                        </li>
+                        <li className="approach-item">
+                          <span className="approach-name">Collaborative Care Planning</span>
+                          <span className="approach-desc">Working with your OB/GYN or primary care provider</span>
+                        </li>
+                        <li className="approach-item">
+                          <span className="approach-name">Convenient Telehealth</span>
+                          <span className="approach-desc">Private, secure appointments from home</span>
+                        </li>
+                      </ul>
           </div>
           </div>
 
           <div style={{textAlign: 'center', marginTop: '40px'}}>
-            <a href="#patient-type" className="btn btn--secondary">
-              Let's Talk — Schedule Today →
+            <a href="#patient-type" className="btn btn--primary" aria-label="Schedule consultation with Stephanie Nichols, CNP">
+              Schedule Consultation
             </a>
+            <p style={{fontSize: '14px', color: 'var(--muted)', marginTop: '12px'}}>
+              Insurance accepted · Ohio licensed provider · Accepting new patients
+            </p>
           </div>
         </div>
       </section>
@@ -104,48 +103,44 @@ export default function Page() {
       <section id="about-stephanie" className="section">
         <div className="section__container">
           <div style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto'}}>
-            <h2 className="section__title">Specialized Expertise in Women's Health</h2>
+                        <h2 className="section__title">About Stephanie M. Nichols, CNP</h2>
             <p className="section__subtitle" style={{marginBottom: '24px'}}>
-              Understanding the unique intersection of hormones, mental health, and women's life stages
+              Specialized in Women's Mental Health & Mid-Life Hormones
             </p>
-            <div className="specialty-clarification">
-              <p><strong>Women-Focused Specialization:</strong> After years in family medicine, I've dedicated my practice exclusively to adult women's mental health and mid-life hormone wellness. 
-              I understand how hormonal changes during perimenopause, postmenopause, and life transitions uniquely affect women's mental health - 
-              something often overlooked in traditional healthcare settings.</p>
+            <div className="bio-content">
+              <p>I am a board-certified psychiatric nurse practitioner with over 25 years of healthcare experience, specializing in the unique mental health needs of women during life transitions. My practice focuses on the connection between hormonal changes and mental wellness, providing integrated care for women navigating perimenopause, menopause, postpartum challenges, and other hormone-related mood disorders.</p>
+            </div>
+            <div style={{textAlign: 'center', marginTop: '32px'}}>
+              <a href="#patient-type" className="btn btn--primary" aria-label="Schedule appointment with Stephanie Nichols, CNP">
+                Schedule Appointment
+              </a>
           </div>
 
-            {/* Credentials Grid */}
+                        {/* Professional Qualifications */}
+            <h3 style={{textAlign: 'center', marginTop: '48px', marginBottom: '32px', color: 'var(--ink)'}}>Professional Qualifications & Expertise</h3>
             <div className="stats-grid">
               <div className="stat-card competitive-advantage">
-                <div className="stat-number">Women's</div>
-                <p className="stat-label">Specialized Focus</p>
-                <div className="stat-detail">Adult mental health & mid-life hormones</div>
+                <div className="stat-number">Women's Health</div>
+                <div className="stat-detail">Specialized training in hormone-mental health connections.</div>
               </div>
               <div className="stat-card competitive-advantage">
-                <div className="stat-number">Integrated</div>
-                <p className="stat-label">Hormone & Mental Health</p>
-                <div className="stat-detail">Understanding the connection</div>
+                <div className="stat-number">25+ Years</div>
+                <div className="stat-detail">Extensive experience with women's life transitions.</div>
               </div>
               <div className="stat-card competitive-advantage">
-                <div className="stat-number">HRT & Psych</div>
-                <p className="stat-label">Dual Expertise</p>
-                <div className="stat-detail">Hormone therapy & psychiatric meds</div>
-              </div>
-              <div className="stat-card competitive-advantage">
-                <div className="stat-number">Mid-Life</div>
-                <p className="stat-label">Transition Support</p>
-                <div className="stat-detail">Perimenopause & life changes</div>
+                <div className="stat-number">Integrated Care</div>
+                <div className="stat-detail">Understanding how hormones affect mood and mental health.</div>
               </div>
     </div>
 
             {/* Professional Statement */}
             <div className="personal-story-card">
-              <h3 style={{textAlign: 'center', marginBottom: '24px', color: 'var(--teal)'}}>My Story: Why I Became a Psychiatric Nurse Practitioner</h3>
+              <h3 style={{textAlign: 'center', marginBottom: '24px', color: 'var(--teal)'}}>Why I Specialize in Women's Mental Health & Hormones</h3>
               <p className="personal-story-text">
-                "After working in family medicine for over two decades, I kept seeing the same pattern: patients coming in with physical symptoms that were really rooted in mental health struggles. A woman experiencing heart palpitations that turned out to be anxiety. A man with chronic fatigue who was actually battling depression. Women going through perimenopause feeling like they were 'going crazy' when it was really hormone-related mood changes that no one was addressing properly.
+                "During my years in family medicine, I noticed a troubling pattern: women coming in feeling anxious, depressed, or 'not themselves' were often dismissed or given quick fixes. A 45-year-old woman with sudden panic attacks was told it was 'just stress.' Women in perimenopause describing mood swings and brain fog were told 'it's just part of getting older.' New mothers struggling with postpartum depression waited months for proper care.
               </p>
               <p className="personal-story-text">
-                I realized that traditional medicine was missing something crucial - the deep connection between our mental health, our hormones, and our overall wellbeing. That's when I decided to specialize exclusively in psychiatric care, with additional training in women's hormone therapy. Because here's what I believe: you deserve a provider who sees the whole picture, who listens without rushing, and who understands that mental health isn't separate from the rest of your health - it's the foundation of everything."
+                I realized these women needed someone who understood the intricate connection between hormones and mental health. That's why I specialized exclusively in women's psychiatric care with advanced training in hormone therapy. Because your mental health journey is unique to your life stage, your hormones, and your experiences as a woman - and you deserve care that honors all of that."
               </p>
               <p className="personal-story-signature">
                 — Stephanie M. Nichols, APRN-CNP
@@ -284,21 +279,19 @@ export default function Page() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                       </div>
-                      <h3 className="patient-card__title">New Patient - Hormone & Mental Health Consultation</h3>
+                      <h3 className="patient-card__title">New Patient Consultation</h3>
                       <p className="patient-card__description">
-                        Comprehensive assessment addressing both your mental health concerns and hormonal health. I'll explore how your 
-                        hormones may be affecting your mood, energy, sleep, and overall wellbeing to create an integrated treatment plan.
+                        Comprehensive assessment focusing on the unique intersection of mental health and hormonal factors affecting women.
                       </p>
                       <ul className="patient-card__list">
-                        <li>90-minute comprehensive initial consultation</li>
-                        <li>Hormone and mental health assessment</li>
-                        <li>Discussion of symptoms: mood, sleep, energy, cognitive changes</li>
-                        <li>Lab recommendations (hormone panels, vitamin levels)</li>
-                        <li>Integrated treatment plan: HRT, psychiatric medications, lifestyle</li>
-                        <li>Same-day prescriptions when appropriate</li>
+                        <li>90-minute detailed consultation</li>
+                        <li>Hormone and mental health history assessment</li>
+                        <li>Life stage-specific evaluation (perimenopause, postpartum, etc.)</li>
+                        <li>Integrated treatment plan for mental health and hormones</li>
+                        <li>Collaboration with your OB/GYN or primary care if needed</li>
                       </ul>
-                      <a href="#contact" className="btn btn--primary">
-                        Schedule New Patient Visit →
+                      <a href="#contact" className="btn btn--primary" aria-label="Schedule new patient consultation">
+                        Schedule New Patient Consultation
                       </a>
                       <p className="patient-card__trust">
                         <strong>Insurance Continuity:</strong> I accept the same major insurance plans from my time at Central Ohio Primary Care, 
@@ -311,21 +304,19 @@ export default function Page() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
-                      <h3 className="patient-card__title">Follow-up - Ongoing Hormone & Mental Health Care</h3>
+                      <h3 className="patient-card__title">Follow-Up Appointment</h3>
                       <p className="patient-card__description">
-                        Continued integrated care monitoring both your hormone therapy and mental health medications. I'll track your progress, 
-                        adjust treatments as needed, and support you through ongoing life transitions and hormonal changes.
+                        Ongoing care focused on your mental health journey as your hormones and life circumstances change.
                       </p>
                       <ul className="patient-card__list">
-                        <li>30-45 minute focused follow-up sessions</li>
-                        <li>Hormone therapy monitoring and adjustments</li>
-                        <li>Mental health medication management</li>
-                        <li>Lab review and interpretation</li>
-                        <li>Symptom tracking: mood, sleep, energy, cognitive function</li>
-                        <li>Support through ongoing life transitions</li>
+                        <li>30-45 minute focused appointments</li>
+                        <li>Hormone and mental health symptom tracking</li>
+                        <li>Medication adjustments for changing needs</li>
+                        <li>Life stage transition support</li>
+                        <li>Coordination with other women's health providers</li>
                       </ul>
-                      <a href="#contact" className="btn btn--primary">
-                        Schedule Follow-up Visit →
+                      <a href="#contact" className="btn btn--primary" aria-label="Schedule follow-up appointment">
+                        Schedule Follow-Up
                       </a>
                       <p className="patient-card__trust">
                         <strong>Insurance Continuity:</strong> I accept the same major insurance plans from my time at Central Ohio Primary Care, 
@@ -350,7 +341,6 @@ export default function Page() {
                       <h4>Initial Contact</h4>
                       <p><strong>Within 24 hours:</strong> My team will contact you to schedule your appointment and verify insurance benefits. We'll also send you secure intake forms to complete before your visit.</p>
                       <div className="step-detail">
-                        <span className="detail-icon">📋</span>
                         <span>Intake forms take about 15 minutes to complete</span>
                       </div>
                     </div>
@@ -360,7 +350,6 @@ export default function Page() {
                       <h4>Your First Appointment</h4>
                       <p><strong>90 minutes dedicated to you:</strong> We'll discuss your concerns, medical history, current symptoms, and goals. I'll explain my assessment and we'll create your personalized treatment plan together.</p>
                       <div className="step-detail">
-                        <span className="detail-icon">💻</span>
                         <span>Secure telehealth platform - no rushing, no interruptions</span>
                       </div>
                     </div>
@@ -370,7 +359,6 @@ export default function Page() {
                       <h4>Treatment Begins</h4>
                       <p><strong>Same day when appropriate:</strong> If medication is recommended, prescriptions are sent directly to your pharmacy. Lab orders (if needed) are sent to your preferred lab.</p>
                       <div className="step-detail">
-                        <span className="detail-icon">💊</span>
                         <span>Electronic prescriptions - no waiting, no extra trips</span>
                       </div>
                     </div>
@@ -380,7 +368,6 @@ export default function Page() {
                       <h4>Ongoing Support</h4>
                       <p><strong>Regular follow-ups:</strong> We'll monitor your progress, adjust treatments as needed, and ensure you're getting the results you deserve. Emergency support available between visits.</p>
                       <div className="step-detail">
-                        <span className="detail-icon">📞</span>
                         <span>Crisis support available - you're never on your own</span>
                       </div>
                     </div>
@@ -389,25 +376,22 @@ export default function Page() {
                   <div className="expectations-note">
                     <h4>What Makes This Different</h4>
                     <div className="difference-grid">
-                      <div className="difference-item">
-                        <span className="difference-icon">⏰</span>
+                                            <div className="difference-item">
                         <div>
-                          <strong>Time for You</strong>
-                          <p>90-minute first visits, 45-minute follow-ups - no rushing</p>
+                          <strong>Extended Appointment Times</strong>
+                          <p>90-minute initial consultations, 45-minute follow-ups</p>
                         </div>
                       </div>
                       <div className="difference-item">
-                        <span className="difference-icon">👩‍⚕️</span>
                         <div>
-                          <strong>Same Provider Every Time</strong>
-                          <p>You'll see me for every appointment - consistency in your care</p>
+                          <strong>Continuity of Care</strong>
+                          <p>Same provider for every appointment ensuring consistent treatment</p>
                         </div>
                       </div>
                       <div className="difference-item">
-                        <span className="difference-icon">📱</span>
             <div>
-                          <strong>Between-Visit Support</strong>
-                          <p>Questions between appointments? I'm available for urgent concerns</p>
+                          <strong>Interim Support</strong>
+                          <p>Available for urgent clinical concerns between scheduled visits</p>
                         </div>
                       </div>
                     </div>
@@ -477,15 +461,15 @@ export default function Page() {
                   <div style={{textAlign: 'center', maxWidth: '700px', margin: '0 auto'}}>
                     <div className="personal-message">
                       <p className="personal-message__text">
-                        "As women, we often put everyone else's needs before our own. If you're struggling with mood changes, feeling like you're not yourself, or wondering if hormones are affecting your mental health - you're not alone. I'm here to help you understand what's happening in your body and mind, and to support you in feeling like yourself again."
-                      </p>
-                      <p className="personal-message__signature">
-                        — Stephanie M. Nichols, APRN-CNP
+                        If you are experiencing mental health challenges or hormone-related symptoms, professional treatment can help. I am currently accepting new patients and am available to discuss how my services might benefit your specific situation.
                       </p>
                     </div>
-                    <a href="#contact" className="btn btn--primary btn--large">
-                      Start Your Mental Health Journey
+                    <a href="#contact" className="btn btn--primary btn--large" aria-label="Schedule consultation with Stephanie Nichols, CNP">
+                      Schedule Consultation
                     </a>
+                    <p style={{fontSize: '14px', color: 'var(--muted)', marginTop: '12px'}}>
+                      Accepting new patients · Ohio licensed provider · Insurance accepted
+                    </p>
                   </div>
                 </div>
               </section>
@@ -617,7 +601,7 @@ export default function Page() {
                       <p style={{fontSize: '14px', fontStyle: 'italic', marginTop: '16px'}}>
                         Your safety is my priority. Please don't hesitate to reach out for help.
                       </p>
-                    </div>
+            </div>
           </div>
         </div>
       </section>
@@ -630,9 +614,9 @@ export default function Page() {
                       <h4>Balanced Care Columbus</h4>
                       <p>Professional mental health and wellness care designed around your needs.</p>
                       <div className="footer-credentials">
-                        <span>✓ Board Certified APRN-CNP</span>
-                        <span>✓ 25+ Years Experience</span>
-                        <span>✓ Ohio Licensed Provider</span>
+                        <span>Board Certified APRN-CNP</span>
+                        <span>25+ Years Experience</span>
+                        <span>Ohio Licensed Provider</span>
                       </div>
                     </div>
                     
