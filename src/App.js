@@ -1,59 +1,83 @@
 import "./App.css";
-import Page from "./Page";
 
 export default function App() {
   return (
-    <>
-            {/* Header */}
-      <header className="header sticky-header">
-        <div className="header__container">
-          <a href="/" className="header__logo">
-            Balanced Care Columbus
-          </a>
-          <nav className="header__nav">
-            <a href="#services" className="nav-link">Services</a>
-            <a href="#about-stephanie" className="nav-link">About Stephanie</a>
-            <a href="#what-to-expect" className="nav-link">What to Expect</a>
-            <a href="#faq" className="nav-link">FAQ</a>
-            <a href="#patient-type" className="btn btn--secondary" aria-label="Schedule appointment with Stephanie Nichols, CNP">
-              Schedule Appointment
-            </a>
-          </nav>
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #faf9f6 0%, #f4efe8 100%)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '20px',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif'
+    }}>
+      <div style={{
+        textAlign: 'center',
+        maxWidth: '500px',
+        background: 'white',
+        padding: '60px 40px',
+        borderRadius: '16px',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
+        borderLeft: '4px solid #2C8E8B'
+      }}>
+        <div style={{
+          fontSize: '18px',
+          fontWeight: '600',
+          color: '#2C8E8B',
+          marginBottom: '8px'
+        }}>
+          Balanced Care Columbus
         </div>
-      </header>
-
-                    {/* Hero Section */}
-              <section className="hero">
-                <div className="hero__card">
-                  <img
-                    src="/stephanie.jpg"
-                    alt="Stephanie Nichols, CNP"
-                    className="hero__avatar"
-                    loading="eager"
-                    decoding="async"
-                  />
-                            <h1 className="hero__name">Stephanie M. Nichols, CNP</h1>
-          <p className="hero__tagline">Women's Mental Health • Mid-Life Hormones • Adult Psychiatric Care</p>
-          <div className="hero__intro">
-            <p>
-              Specialized care for women navigating mental health challenges during life transitions. I understand how hormonal changes affect mood, anxiety, and overall well-being. My integrated approach addresses both mental health and hormonal factors for comprehensive care tailored specifically to women's unique needs.
-            </p>
-          </div>
-          <a 
-            href="#patient-type" 
-            className="btn btn--primary btn--large hero__cta"
-            aria-label="Schedule a consultation with Stephanie Nichols, CNP"
-          >
-            Schedule Consultation
-          </a>
-          <p className="hero__trust">
-            HIPAA-compliant telehealth · Insurance accepted · Ohio licensed provider
-          </p>
-                </div>
-              </section>
-
-      {/* Main website content */}
-      <Page />
-    </>
+        
+        <div style={{
+          fontSize: '12px',
+          color: '#555555',
+          marginBottom: '32px',
+          textTransform: 'uppercase',
+          letterSpacing: '0.5px'
+        }}>
+          Women's Mental Health • Mid-Life Hormones
+        </div>
+        
+        <div style={{
+          fontSize: '72px',
+          fontWeight: '700',
+          color: '#2C8E8B',
+          marginBottom: '16px',
+          lineHeight: '1'
+        }}>
+          Coming Soon
+        </div>
+        
+        <h1 style={{
+          fontSize: '24px',
+          fontWeight: '600',
+          color: '#1a1a1a',
+          marginBottom: '16px',
+          margin: '0 0 16px 0'
+        }}>
+          Website Under Construction
+        </h1>
+        
+        <p style={{
+          fontSize: '16px',
+          color: '#555555',
+          lineHeight: '1.6',
+          marginBottom: '32px',
+          margin: '0 0 32px 0'
+        }}>
+          We're building something special for women's mental health and hormone care. 
+          Our new website will launch soon with comprehensive information about our specialized services.
+        </p>
+        
+        <p style={{
+          fontSize: '12px',
+          color: '#555555',
+          margin: '0'
+        }}>
+          Now accepting new patients • Most insurance plans accepted
+        </p>
+      </div>
+    </div>
   );
 }
